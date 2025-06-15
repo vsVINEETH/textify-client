@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aadhaar Data Extractor 🆔🔍
 
-## Getting Started
+A modern, full-stack web application for extracting structured personal information from Aadhaar card images using OCR (Optical Character Recognition).
 
-First, run the development server:
+Built with **Next.js (React)** on the frontend and **Express.js** on the backend using **TypeScript** and **Clean Architecture** principles.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📤 Upload both **front and back** sides of Aadhaar cards
+- 🔍 Extract:
+  - Name
+  - Date of Birth
+  - Gender
+  - Aadhaar Number
+  - Full Address
+- 🧠 Uses `Tesseract.js` for client-side OCR
+- 🔐 Image size validation (50KB - 10MB)
+- 🖼️ Real-time image preview before submission
+- 📦 Modular and scalable architecture
+- 🌐 Fully typed with TypeScript
+- 🧼 Input sanitization and file type validation
+- ✨ Beautiful, responsive UI with Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+- ⚛️ [React](https://reactjs.org/)
+- ⚡ [Next.js](https://nextjs.org/)
+- 🎨 [Tailwind CSS](https://tailwindcss.com/)
+- 📦 Axios for HTTP communication
+- 🔠 TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend
+- 🚀 [Node.js](https://nodejs.org/)
+- 🧭 [Express.js](https://expressjs.com/)
+- 🧱 Clean Architecture structure
+- 📄 Multer for handling file uploads
+- 👓 [Tesseract.js](https://github.com/naptha/tesseract.js) for OCR
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### Setup Instructions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ ## 1. Clone the Repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    git clone https://github.com/your-username/aadhaar-data-extractor.git
+    cd aadhaar-data-extractor
+
+## 2. Install Dependencies
+
+     Client:
+
+        cd client
+        npm install
+
+     Server:
+
+        cd ../server
+        npm install
+
+### 3. Start the App
+
+    Server:
+
+    npm run dev
+    # Runs on http://localhost:4000
+
+    Client:
+
+    cd ../client
+    npm run dev
+    # Runs on http://localhost:3000
+
+### ✅ Validations & Security
+
+    File type: Only image files (.jpg, .jpeg, .png)
+
+    File size: Between 50 KB and 10 MB
+
+    Input is sanitized and processed only in memory (no disk storage)
+
+    OCR results cleaned for high accuracy
+
+    Addresses and names extracted with fallback logic
+
