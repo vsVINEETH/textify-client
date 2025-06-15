@@ -1,10 +1,9 @@
-import Home from "@/components/Home";
-
+import ImageUploader from "@/components/ImgUploader";
 const HomePage = () => {
 
     return(
         <>
-         <Home/>
+         <ImageUploader/>
         </>
     )
 };
