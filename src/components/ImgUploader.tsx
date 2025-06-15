@@ -25,7 +25,7 @@ const ImageUploader = () => {
       const response = await extractText(formData)
       setExtractedData({ ...response?.data.data.backText, ...response?.data.data.frontText })
     } catch (error) {
-      console.log(`Oop's Something happened`)
+      console.log(`Oop's Something happened`, error)
     } finally {
       setIsExtracting(false)
     }
@@ -50,7 +50,7 @@ const ImageUploader = () => {
 
       return true
     } catch (error) {
-      console.log(`Oop's Something happened`)
+      console.log(`Oop's Something happened`, error)
       return false
     }
   }

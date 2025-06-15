@@ -1,6 +1,5 @@
 'use client'
 import axiosInstance from "@/app/utils/axiosConfig";
-import { ApiResponse } from "../../types/api";
 import { useState } from "react";
 
 export const useServices  = () => {
@@ -18,6 +17,7 @@ export const useServices  = () => {
         } catch (error) {
            setError(true);
            setLoading(false);
+           console.log(error)
         };
     };
 
@@ -30,6 +30,7 @@ export const useServices  = () => {
         } catch (error) {
            setError(true);
            setLoading(false);
+           console.log(error)
         };
     };
 
@@ -45,6 +46,7 @@ export const useServices  = () => {
         } catch (error) {
            setError(true);
            setLoading(false)
+           console.log(error)
         };
     };
 
